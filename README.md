@@ -1,7 +1,3 @@
----
-# Este archivo es la carta de presentación de tu bóveda en GitHub.
-# Léelo con calma, tiene todo lo que necesitas saber para empezar.
----
 # 🎓 Bóveda de Ingeniería Informática (Plantilla para Obsidian)
 
 [![GitHub release](https://img.shields.io/github/v/release/JavierHidalgoR/boveda-ingenieria-informatica)](https://github.com/O-Javier-Hidalgo-R/boveda-obsidian-estudios/releases)
