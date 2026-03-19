@@ -13,6 +13,6 @@
   "vscode-editor",
   "waypoint",
   "folder-notes",
-  "obsidian-to-anki-plugin",
-  "obsidian-git"
+  "obsidian-git",
+  "obsidian-to-anki-plugin"
 ]

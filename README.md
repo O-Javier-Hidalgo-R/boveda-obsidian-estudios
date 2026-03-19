@@ -1,155 +1,182 @@
----
-
-tags: [meta, guia]
-
----
-# 🎓 Bienvenida a tu Bóveda de Estudios
-
-**Autor:** [Osmar Javier Hidalgo Riffarachi](mailto:javierhidalgor99@gmail.com)  
-**Versión:** 1.0  
-**Última actualización:** 2026/03/18
-
-> [!quote] Filosofía  
-> _"Captura sin fricción, organiza después. Las notas atómicas se conectan — los carpetazos se olvidan."_
-> Esta bóveda es un **sistema personal de gestión del conocimiento** diseñado para acompañarte durante toda tu carrera. No es una simple carpeta de archivos, sino una red de ideas conectadas que crece con cada clase, proyecto y concepto que dominas.
+# 🎓 Bóveda de Ingeniería Informática (Plantilla para Obsidian)
+ 
+[![GitHub release](https://img.shields.io/github/v/release/tu-usuario/boveda-ingenieria-informatica)](https://github.com/tu-usuario/boveda-ingenieria-informatica/releases)
+[![Obsidian](https://img.shields.io/badge/Obsidian-483699?style=flat&logo=obsidian&logoColor=white)](https://obsidian.md/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
 
-## 📚 ¿Qué encontrarás aquí?
+> Una plantilla completa y lista para usar de un sistema personal de gestión del conocimiento (PKM) para estudiantes de ingeniería, construida sobre Obsidian.  
+> **Captura sin fricción, organiza después. Las notas atómicas se conectan — los carpetazos se olvidan.**
 
-- Una estructura clara para organizar **materias, proyectos y recursos**.
-- Flujos de trabajo para tomar apuntes, revisarlos y convertirlos en conocimiento permanente.
-- **Dashboards automáticos** que te muestran el estado de tu progreso.
-- Integración con **tareas, kanban, diagramas, laboratorios y bitácora de proyectos**.
-- Atajos de teclado y scripts para automatizar tareas repetitivas.
-- Sincronización con **Git + GitHub** y posibilidad de exportar a PDF con Pandoc.
+---
+
+## 📋 Tabla de Contenidos
+
+- [Casos de uso que cubre esta bóveda](#-casos-de-uso-que-cubre-esta-bóveda)
+- [Características principales](#-características-principales)
+- [Estructura de la bóveda](#-estructura-de-la-bóveda)
+- [Flujo de trabajo resumido](#-flujo-de-trabajo-resumido)
+- [Atajos de teclado](#-atajos-de-teclado)
+- [Plugins necesarios](#-plugins-necesarios)
+- [Cómo usar esta plantilla](#-cómo-usar-esta-plantilla)
+- [Cómo contribuir / Actualizar la plantilla](#-cómo-contribuir--actualizar-la-plantilla)
+- [Licencia](#-licencia)
+
+---
+
+## ✅ Casos de uso que cubre esta bóveda
+
+Esta plantilla está diseñada para resolver las necesidades reales de un estudiante de ingeniería. A continuación, un checklist de lo que puedes hacer desde el primer momento:
+
+- [x] **Tomar apuntes de clase** con un solo atajo, incluyendo metadatos (fecha, materia, estado de revisión).
+- [x] **Capturar ideas rápidas** sin interrumpir el flujo de estudio (inbox `00-capturas`).
+- [x] **Organizar por materias** con una estructura homogénea (clases, temas, proyectos, laboratorios, recursos).
+- [x] **Profundizar conceptos** en notas de `temas/` con campo de dificultad (`🟢 baja`, `🟡 media`, `🔴 alta`) para priorizar repaso.
+- [x] **Gestionar proyectos por fases** con overview, tareas operativas y tablero kanban, todo generado automáticamente.
+- [x] **Crear tareas con subtareas, fechas, prioridades y asignaciones** gracias al plugin Tasks.
+- [x] **Programar tareas recurrentes** (ej. estudio semanal) usando la sintaxis `🔁 every week`.
+- [x] **Visualizar el avance de proyectos** con tableros kanban integrados.
+- [x] **Llevar una bitácora de proyectos** (reuniones, decisiones) mediante entradas etiquetadas en el diario.
+- [x] **Registrar prácticas de laboratorio** en una carpeta específica dentro de cada materia.
+- [x] **Identificar conceptos difíciles** mediante queries que los muestran en los dashboards de materia y general.
+- [x] **Crear mapas de contenido (MOCs)** para conectar temas transversales entre materias.
+- [x] **Consolidar conocimiento permanente** moviendo notas dominadas a `06-conocimiento/`.
+- [x] **Repasar con flashcards** integrando Obsidian con Anki (plugin Obsidian_to_Anki).
+- [x] **Exportar cualquier nota a PDF** con un alias de Pandoc (`md2pdf`).
+- [x] **Sincronizar la bóveda entre dispositivos** usando Git + GitHub (con el plugin Obsidian Git).
+- [x] **Mantener un historial de cambios** gracias al control de versiones.
+- [x] **Tener una visión global del progreso** con el `Dashboard General.md` y los informes por materia (dataview).
+
+> Si necesitas algo más, la estructura es totalmente extensible.
+
+---
+
+## ✨ Características principales
+
+- **Estructura probada** en carreras de ingeniería.
+- **Automatización con QuickAdd y Templater**: scripts que crean la carpeta de una materia o de un proyecto con todo lo necesario.
+- **Dashboards dinámicos** con Dataview: estado de clases, tareas, proyectos, dificultad, etc.
+- **Gestión de tareas avanzada** con Tasks (recurrentes, fechas, prioridades).
+- **Sincronización profesional** con Git/GitHub (opcional pero recomendada).
+- **Exportación a PDF** mediante Pandoc.
+- **Totalmente personalizable**: cambia plantillas, añade campos, crea nuevas queries.
 
 ---
 
 ## 🗂️ Estructura de la bóveda
 
-![[estructura_general_boveda.excalidraw.md|800]]
+![[estructura_general_boveda.excalidraw|800]]
 
 ---
 
-## 🔄 Flujo de trabajo detallado
+## 🔄 Flujo de trabajo resumido
 
-### Durante la clase
+1. **Crear una materia** → `Ctrl+Shift+M` (ejecuta script que genera carpeta e `informe.md`).
+2. **Tomar apuntes en clase** → `Ctrl+Shift+C` (crea nota en `clases/`).
+3. **Revisar después de clase** → desde el `informe.md` se ven las clases pendientes; al terminarlas, cambiar estado a `🟢 revisado`.
+4. **Iniciar un proyecto** → `Ctrl+Shift+P` (script que crea subcarpeta con overview, tareas y kanban).
+5. **Gestionar tareas** → dentro de la nota de tareas del proyecto, usar sintaxis Tasks.
+6. **Registrar en el diario** → `Ctrl+Shift+Y` (nota diaria con sección para bitácora etiquetada).
+7. **Consultar el progreso** → el `Dashboard General.md` y los informes de materia se actualizan solos.
+8. **Al final del semestre** → mover la materia a `08-archivo/`.
 
-- `Ctrl+Shift+C` → Crea una nueva nota de clase con la plantilla. Escribe libremente.
-- Si surge una idea sin lugar claro, `Ctrl+Shift+A` la envía a `00-capturas/`.
+---
 
-### Después de clase (revisión diaria)
+## ⌨️ Atajos de teclado
+*(Configurados mediante QuickAdd; puedes cambiarlos en Ajustes → Atajos de teclado)*
 
-- Abre el `informe.md` de la materia y revisa las clases pendientes (estado `🟡 sin-revisar`).
-- Enlaza la clase a temas existentes o crea nuevos temas (`Ctrl+Shift+T`).
-- Cambia el estado de la clase a `🟢 revisado`.
-- Procesa las capturas de `00-capturas/` y archívalas o conviértelas en notas permanentes.
-
-### Gestión de proyectos
-
-- `Ctrl+Shift+P` → Crea la estructura de un nuevo proyecto (overview, tareas, kanban) con numeración automática (`proy-XX`).
-- Las tareas se gestionan con el plugin **Tasks**:
-  - Usa fechas `📅 YYYY-MM-DD`, prioridades `⏫ 🔼 🔽`, asignados `@persona`.
-  - Para tareas recurrentes: `🔁 every week` (u otro intervalo).
-  - Etiqueta las tareas con `#proy-XX/fase-Y`.
-- El tablero **Kanban** te da una vista visual del avance.
-
-### Bitácora de proyectos (reuniones, decisiones)
-
-- En tu nota diaria (`05-diario/YYYY-MM-DD.md`), usa una sección "Bitácora de proyectos" y añade el tag correspondiente, por ejemplo `#proy-01`.
-- Luego, en el dashboard del proyecto, puedes incluir una query de Dataview que liste todas las entradas del diario con ese tag.
-
-### Laboratorios y prácticas
-
-- Dentro de cada materia, hay una carpeta `laboratorios/`. Allí puedes guardar:
-  - Enunciados (en `recursos/`).
-  - Notas con soluciones, código, resultados.
-  - Si el laboratorio es largo, trátalo como un mini‑proyecto con sus propias tareas.
-
-### Seguimiento de dificultad
-
-- En las notas de tipo `tema` y `conocimiento`, incluye el campo `dificultad: 🟢 baja, 🟡 media, 🔴 alta`.
-- El `informe.md` de cada materia muestra automáticamente los conceptos con dificultad alta para que priorices su repaso.
-
-### Consolidación semanal (viernes)
-
-- Revisa los dashboards de materia.
-- Identifica conceptos que consideres **competencias profesionales duraderas** y muévelos a `06-conocimiento/` (manteniendo enlaces).
-- Actualiza los MOCs en `07-mapas/` para reflejar conexiones transversales.
-- Planifica la siguiente semana usando las tareas y el diario.
-
-### Repaso espaciado (opcional, con Anki)
-
-- Usa el plugin **Obsidian_to_Anki** para convertir fragmentos de tus notas en flashcards y sincronizarlos con Anki.
-
-### Fin de semestre
-
-- Mueve la carpeta de la materia completa a `08-archivo/`.
-- Las notas de conocimiento permanecen en `06-conocimiento/` y `07-mapas/`.
-
-### Exportación a PDF
-
-- Usa Pandoc desde la terminal con tus alias:
-
-  ```bash
-  md2pdf nota.md          # genera nota.pdf
-  slides2pdf presentacion.md  # genera diapositivas
-  ```
+| Atajo          | Acción                             | Mnemotecnia                  |
+| -------------- | ---------------------------------- | ---------------------------- |
+| `Ctrl+Shift+C` | Nueva nota de clase                | **C**lase                    |
+| `Ctrl+Shift+E` | Nueva nota de tema / concepto      | **E** (por "tEma")           |
+| `Ctrl+Shift+P` | Nuevo proyecto (ejecuta script)    | **P**royecto                 |
+| `Ctrl+Shift+Y` | Entrada del diario de hoy          | **Y** (por "dIario" o "daY") |
+| `Ctrl+Shift+A` | Captura rápida → `00-capturas/`    | **A**punte rápido            |
+| `Ctrl+Shift+M` | Inicializar nueva materia (script) | **M**ateria                  |
+| `Ctrl+Shift+O` | Abrir Omnisearch                   | **O**mnisearch               |
 
 ---
 
 ## 🔌 Plugins necesarios
 
-Asegúrate de instalar y configurar estos plugins desde la comunidad de Obsidian:
+Instala estos plugins desde la comunidad de Obsidian:
 
-|Plugin|Función principal|
-|---|---|
-|Templater|Plantillas dinámicas con lógica|
-|Dataview|Consultas automáticas sobre metadatos|
-|QuickAdd|Macros y capturas rápidas|
-|Tasks|Gestión avanzada de tareas (recurrentes incl.)|
-|Kanban|Tableros kanban visuales|
-|Calendar|Calendario integrado al diario|
-|Excalidraw|Diagramas y mapas mentales|
-|Omnisearch|Búsqueda global rápida|
-|Advanced Tables|Edición cómoda de tablas Markdown|
-|Obsidian_to_Anki|Crear flashcards y enviar a Anki|
-|Obsidian Git|Sincronización automática con GitHub|
+- **Templater**
+- **Dataview**
+- **QuickAdd**
+- **Tasks**
+- **Kanban**
+- **Calendar**
+- **Excalidraw**
+- **Omnisearch**
+- **Advanced Tables**
+- **Obsidian_to_Anki** (opcional)
+- **Obsidian Git** (opcional, pero recomendado)
 
----
-
-## ⌨️ Atajos de teclado (configurables en QuickAdd)
-
-|Atajo|Acción|
-|---|---|
-|`Ctrl+Shift+C`|Nueva nota de clase|
-|`Ctrl+Shift+T`|Nueva nota de tema / concepto|
-|`Ctrl+Shift+P`|Nuevo proyecto (ejecuta script)|
-|`Ctrl+Shift+D`|Entrada del diario de hoy|
-|`Ctrl+Shift+A`|Captura rápida → `00-capturas/`|
-|`Ctrl+Shift+M`|Inicializar nueva materia (script)|
-|`Ctrl+Shift+O`|Abrir Omnisearch|
+> **Nota**: Después de instalar los plugins, revisa la configuración de cada uno siguiendo las indicaciones de la [Guía completa](00%20-%20Bienvenida%20y%20Guía.md) dentro de la bóveda.
 
 ---
 
-## 🔐 Sincronización y respaldo
+## 🚀 Cómo usar esta plantilla
 
-- La bóveda está versionada con **Git** y conectada a un repositorio privado en GitHub.
-- Usa el plugin **Obsidian Git** para hacer commit y push automáticos (o manuales) desde Obsidian.
-- Antes de trabajar en otro dispositivo, haz pull de los cambios; al terminar, push.
-- Esto te da historial completo y evita conflictos.
+### Opción 1: Descargar para uso personal (sin Git)
+
+1. Ve a [https://github.com/tu-usuario/boveda-ingenieria-informatica](https://github.com/tu-usuario/boveda-ingenieria-informatica)
+2. Haz clic en **"Code" → "Download ZIP"**.
+3. Descomprime el ZIP en la carpeta donde quieras tener tu bóveda.
+4. Abre Obsidian, selecciona "Abrir carpeta como bóveda" y elige esa carpeta.
+5. Sigue la [Guía de inicio rápido](00%20-%20Bienvenida%20y%20Guía.md) para instalar plugins y configurar los atajos.
+
+### Opción 2: Usar como plantilla de GitHub (para crear tu propio repositorio)
+
+Si quieres tener tu bóveda también versionada y poder recibir actualizaciones de la plantilla:
+
+1. En GitHub, haz clic en **"Use this template"** (botón verde) y crea un nuevo repositorio con el nombre que quieras (ej. `mi-boveda-fisica`).
+2. Clona **tu nuevo repositorio** en tu ordenador.
+3. Abre Obsidian con esa carpeta.
+4. Configura los plugins y empieza a usarla.
+5. Si más adelante la plantilla original se actualiza con nuevas funcionalidades, puedes hacer un `merge` desde el repositorio original (explicado abajo).
 
 ---
 
-## 📖 Referencias útiles
+## 🔄 Cómo contribuir / Actualizar la plantilla
 
-- [Obsidian Help](https://help.obsidian.md/)
-- [Dataview Documentation](https://blacksmithgu.github.io/obsidian-dataview/)
-- [Templater Docs](https://silentvoid13.github.io/Templater/)
-- [Tasks User Guide](https://obsidian-tasks-group.github.io/Obsidian-Tasks/)
-- [Obsidian Git](https://github.com/denolehov/obsidian-git)
+### Si quieres proponer mejoras (para el repositorio original)
+
+1. Haz un fork de este repositorio.
+2. Crea una rama con tu mejora (`git checkout -b nueva-funcionalidad`).
+3. Realiza los cambios (nuevos scripts, plantillas, documentación, etc.).
+4. Haz commit y push a tu fork.
+5. Abre un Pull Request describiendo los cambios y cómo mejoran la plantilla.
+
+### Si has creado tu propia bóveda a partir de esta plantilla y quieres actualizarla con los últimos cambios de la plantilla
+
+Asumiendo que creaste tu repositorio usando el botón "Use this template" (lo que mantiene un vínculo implícito, pero no automático), puedes hacer lo siguiente:
+
+```bash
+# Añade el repositorio original como upstream (solo una vez)
+git remote add upstream https://github.com/tu-usuario/boveda-ingenieria-informatica.git
+# Trae los cambios de la plantilla
+git fetch upstream
+# Fusiona los cambios en tu rama principal (main)
+git checkout main
+git merge upstream/main
+# Resuelve conflictos si los hay y haz commit
+git push origin main
+```
+
+De esta forma, puedes beneficiarte de las nuevas funcionalidades que se añadan a la plantilla sin perder tus notas personales (aunque pueden aparecer conflictos en archivos que hayas modificado, como el README o las plantillas; revíselos con cuidado).
+
+> **Consejo**: Si personalizas mucho la estructura, quizá prefieras no actualizar automáticamente, sino tomar solo las mejoras que te interesen de forma manual.
 
 ---
 
-_¡Que tu conocimiento crezca en red!_
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Puedes usarlo, codificarlo y distribuirlo libremente, siempre que incluyas el aviso de copyright.
+
+---
+
+**¡Que tu conocimiento crezca en red!**  
+Si tienes dudas o sugerencias, abre un [issue](https://github.com/tu-usuario/boveda-ingenieria-informatica/issues).
