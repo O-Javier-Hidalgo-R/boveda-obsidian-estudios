@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "9f958cb7dacd1fe1",
+        "id": "18e855de55223605",
         "type": "tabs",
         "children": [
           {
-            "id": "4462c5746f8a6967",
+            "id": "bb4531039d969470",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 228.5
   },
   "right": {
     "id": "884cfb1a0cc56f41",
@@ -187,7 +187,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -205,48 +206,47 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "vscode-editor:Create Code File": false,
       "obsidian-git:Open Git source control": false,
-      "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false,
-      "obsidian-spaced-repetition:Revisar Tarjetas": false
+      "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false
     }
   },
-  "active": "4462c5746f8a6967",
+  "active": "bb4531039d969470",
   "lastOpenFiles": [
-    "03-recursos/excalidraw/estructura_general_boveda.excalidraw.md",
     "README.md",
-    "test.md",
-    "readme.md",
+    "resumen_boveda.md",
+    "03-recursos/excalidraw/estructura_general_boveda.excalidraw.md",
+    "01-materias/sistemas-informacion-2/tareas/tareamateria.md",
+    "02-proyectos/proy-01_projectoGeneral/proy-01_tareas.md",
+    "Untitled.md",
     "scripts/inicializar_proyecto.js",
     "01-materias/sistemas-informacion-2/informe.md",
-    "01-materias/sistemas-informacion-2/clases/2026-03-18_formacion-grupos.md",
-    "01-materias/sistemas-informacion-2/laboratorios/laboratorios.md",
-    "01-materias/sistemas-informacion-2/recursos/recursos.md",
-    "01-materias/sistemas-informacion-2/tareas/tareas.md",
-    "01-materias/sistemas-informacion-2/laboratorios",
-    "01-materias/sistemas-informacion-2/proyectos/proyectos.md",
-    "01-materias/sistemas-informacion-2/recursos",
-    "01-materias/sistemas-informacion-2/temas/temas.md",
-    "01-materias/sistemas-informacion-2/tareas",
-    "01-materias/sistemas-informacion-2/clases/clases.md",
-    "01-materias/sistemas-informacion-2/proyectos",
-    "01-materias/sistemas-informacion-2/sistemas-informacion-2.md",
-    "01-materias/sistemas-informacion-2/temas",
-    "01-materias/sistemas-informacion-2/clases",
-    "01-materias/sistemas-informacion-2",
-    "04-plantillas/plantilla_clase.md",
-    "04-plantillas/plantilla_moc.md",
-    "scripts/inicializar_proyecto.ts",
-    "scripts/inicializar_materia.js.js",
-    "04-plantillas/plantilla_conocimiento.md",
-    "04-plantillas/plantilla_proyecto.md",
-    "04-plantillas/plantilla_nota_diaria.md",
-    "04-plantillas/plantilla_tema.md",
+    "01-materias/sistemas-informacion-2/proyectos/proy-01_proyectoMateria/proy-01_tareas.md",
+    "01-materias/sistemas-informacion-2/proyectos/proy-01_proyectoMateria/proy-01_kanban.md",
+    "01-materias/sistemas-informacion-2/proyectos/proy-01_proyectoMateria/tareas/titulotarea.md",
+    "01-materias/sistemas-informacion-2/proyectos/proy-01_proyectoMateria/tareas",
+    "09-tareas/tareasuelta.md",
+    "02-proyectos/proy-01_projectoGeneral/proy-01_kanban.md",
+    "02-proyectos/proy-01_projectoGeneral/proy-01_projectoGeneral.md",
+    "02-proyectos/proy-01_projectoGeneral",
+    "01-materias/sistemas-informacion-2/proyectos/proy-01_proyectoMateria/proy-01_proyectoMateria.md",
+    "01-materias/sistemas-informacion-2/proyectos/proy-01_proyectoMateria",
+    "scripts/inicializar_materia.js",
+    "01-materias/sistemas-informacion-2/proyectos/proy-01_nombreProyecto/proy-01_nombreProyecto.md",
+    "01-materias/sistemas-informacion-2/proyectos/proy-01_nombreProyecto/proy-01_kanban.md",
+    "01-materias/sistemas-informacion-2/proyectos/proy-01_nombreProyecto/proy-01_tareas.md",
+    "01-materias/sistemas-informacion-2/proyectos/proy-01_nombreProyecto",
+    "scripts/crear_tarea.js",
+    "01-materias/sistemas-informacion-2/proyectos/proy-01_nombreProyecto/tareaproyecto.md",
+    "01-materias/sistemas-informacion-2/proyectos/proy-01_nombreProyecto/tareaprojecto.md",
+    "01-materias/sistemas-informacion-2/proyectos/proy-01_nombreProyecto/titulotareita.md",
+    "09-tareas",
+    "scripts/Sin título.md",
     "04-plantillas/plantilla_tarea.md",
-    "resumen_boveda.md",
-    "00 - Bienvenida y Guía.md",
-    "03-recursos/fuentes/Fira_Sans/Fira_Sans.md",
-    "03-recursos/fuentes/Fira_Code/static/static.md",
-    "03-recursos/fuentes/Fira_Code/Fira_Code.md",
-    "03-recursos/fuentes/fuentes.md",
+    "01-materias/sistemas-informacion-2/tareas/nombreTarea.md",
+    "01-materias/sistemas-informacion-2/tareas/nombreTarea1.md",
+    "nombreTarea1.md",
+    "crearTarea.md",
+    "01-materias/sistemas-informacion-2/laboratorios",
+    "01-materias/sistemas-informacion-2/recursos",
     "03-recursos/excalidraw/estructura_general_boveda.svg",
     "Sin título.canvas"
   ]
