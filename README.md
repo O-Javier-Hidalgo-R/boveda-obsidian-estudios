@@ -185,14 +185,14 @@ La nota `weekly-review` se genera automáticamente. Las consultas Dataview mue
 
 Las tarjetas van en cualquier nota usando este formato:
 
-text
-
+```text
 START
 Básico
 ¿Pregunta?
 Back: Respuesta completa.
 Tags: materia tema
 END
+```
 
 > **Nota:** el tipo de tarjeta es `Básico` si Anki está configurado en **español**.  
 > Si tu Anki está en inglés, usá `Basic`.
@@ -245,4 +245,4 @@ Distribuido bajo la licencia MIT. Ver [`LICENSE`](https://license/) para más 
 
 Hecho con ❤️ para estudiantes de Ingeniería
 
-</div> ```
+</div>
