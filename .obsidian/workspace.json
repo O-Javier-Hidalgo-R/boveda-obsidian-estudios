@@ -190,8 +190,8 @@
       "bases:Crear nueva base": false,
       "templater-obsidian:Templater": false,
       "obsidian-kanban:Create new board": false,
-      "periodic-notes:Open today": false,
-      "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false
+      "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false,
+      "periodic-notes:Open today": false
     }
   },
   "active": "f946a51b1927dd3e",
