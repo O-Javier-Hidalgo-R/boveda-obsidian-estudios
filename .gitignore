@@ -1,15 +1,41 @@
-# Ignorar archivos del sistema
+# ── Obsidian — archivos de workspace (personales, no compartir) ──────────────
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/workspace-mobile.json.bak
+.obsidian/cache
+.obsidian/backups/
+
+# ── Obsidian — plugins (cada usuario los instala por su cuenta) ──────────────
+# Se excluye la carpeta de plugins pero se mantiene el directorio vacío
+.obsidian/plugins/
+
+# ── Archivos de sistema ───────────────────────────────────────────────────────
+.trash/
 .DS_Store
 Thumbs.db
+desktop.ini
+*~
+*.swp
+*.swo
 
-# Ignorar la papelera de Obsidian
-.trash/
+# ── Notas personales (contenido real de la bóveda, no es parte del template) ─
+00_Inbox/Daily/*.md
+01_Notes/Lectures/**/*.md
+01_Notes/Concepts/**/*.md
+02_Projects/*.md
+03_Areas/**/*.md
+04_Resources/**/*
+05_Reviews/Weekly/*.md
+06_Archive/**/*
 
-# Ignorar archivos de caché y workspace (se regeneran)
-.obsidian/workspace
-.obsidian/cache
-.obsidian/plugins.json
-
-# Ignorar archivos de respaldo de git
-*.orig
-*.bak
+# ── Excepciones: sí incluir estos archivos aunque coincidan con reglas arriba ─
+!Dashboard-Global.md
+!LEEME.md
+!_Templates/**
+!.obsidian/app.json
+!.obsidian/appearance.json
+!.obsidian/snippets/
+!.obsidian/snippets/*.css
+!.gitignore
+!README.md
+!LICENSE

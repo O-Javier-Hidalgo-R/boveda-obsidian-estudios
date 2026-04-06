@@ -1,8 +1,9 @@
 {
   "cssTheme": "Minimal",
-  "interfaceFontFamily": "Fira Sans",
-  "textFontFamily": "Fira Sans",
-  "monospaceFontFamily": "Fira Code",
-  "baseFontSizeAction": false,
-  "theme": "obsidian"
+  "enabledCssSnippets": [
+    "lectura"
+  ],
+  "interfaceFontFamily": "Inter",
+  "textFontFamily": "Inter",
+  "monospaceFontFamily": "JetBrains Mono"
 }

@@ -1,16 +1,14 @@
 [
   "templater-obsidian",
   "dataview",
-  "obsidian-excalidraw-plugin",
   "obsidian-kanban",
-  "quickadd",
-  "obsidian-style-settings",
-  "omnisearch",
-  "table-editor-obsidian",
   "calendar",
-  "drawio-obsidian",
+  "periodic-notes",
   "obsidian-tasks-plugin",
-  "vscode-editor",
-  "obsidian-git",
-  "obsidian-to-anki-plugin"
+  "obsidian-to-anki-plugin",
+  "buttons",
+  "quickadd",
+  "obsidian-minimal-settings",
+  "obsidian-style-settings",
+  "obsidian-hider"
 ]
