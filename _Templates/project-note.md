@@ -1,31 +1,16 @@
-%% ============================================================
-PLANTILLA: PROYECTO / PRÁCTICO / PARCIAL
-
-CUÁNDO USARLA: Para cada parcial, trabajo práctico o proyecto grupal.
-DÓNDE GUARDARLA: 02_Projects/
-
-NOMBRE DE ARCHIVO RECOMENDADO:
-  MATERIA-nombre-del-proyecto
-  ej: SI2-parcial1-auxilio-mecanico
-      ALGO-proyecto-gestion-inventario
-
-CÓMO USAR EL KANBAN:
-  - Backlog: todo lo que hay que hacer pero aún no priorizaste
-  - Por hacer esta semana: máximo 5–7 tareas para los próximos 7 días
-  - En progreso: lo que estás haciendo AHORA (máximo 3 cosas simultáneas)
-  - En revisión: terminado pero pendiente de revisión o entrega
-  - Completado: listo. Archivá semanalmente para no acumular ruido visual
-============================================================ %%
-
----
+<%*
+  let materia = await tp.system.prompt("Materia (slug, ej: sistemas-informacion-2)");
+  if (!materia) return;
+  let semestre = await tp.system.prompt("Semestre (opcional)", "", true);
+  let fechaInicio = tp.date.now("YYYY-MM-DD");
+  let fechaEntrega = await tp.system.prompt("Fecha de entrega (YYYY-MM-DD)", "", true);
+%>---
 tipo: proyecto
-materia: 
-%% ↑ Slug de la materia. Debe coincidir con el usado en el resto de notas. %%
-fecha-inicio: <% tp.date.now("YYYY-MM-DD") %>
-fecha-entrega: 
-%% ↑ Formato YYYY-MM-DD. El Dashboard lo usa para ordenar por urgencia. %%
+materia: <% materia %>
+semestre: <% semestre %>
+fecha-inicio: <% fechaInicio %>
+fecha-entrega: <% fechaEntrega %>
 estado: 🔵 en-progreso
-%% ↑ Opciones: 🔵 en-progreso | ✅ entregado | ⏸️ pausado %%
 tags: [proyecto]
 ---
 
@@ -34,13 +19,10 @@ tags: [proyecto]
 ## 🎯 Objetivo
 %% Una o dos oraciones que describan exactamente qué hay que entregar.
    Leélo antes de cada sesión de trabajo para no perder el foco. %%
-
-
-
+   
 ## 📋 Requisitos del docente
 %% Lista exacta de lo que pidió el docente. Copiala literalmente si es posible.
    Es tu checklist de entregable mínimo. %%
-- 
 - 
 
 ## 👥 Equipo
@@ -80,10 +62,6 @@ kanban-plugin: basic
 ## 📁 Archivos y recursos relacionados
 %% Links a PDFs, repos de GitHub, documentos de Drive, etc. %%
 
-
-
 ## 🔗 Conceptos aplicados
-%% Links a las notas atómicas de conceptos que usás en este proyecto.
-   Útil para repasar la teoría cuando estás desarrollando. %%
-
-
+%% Links a las notas atómicas de conceptos que usás en este proyecto.  
+Útil para repasar la teoría cuando estás desarrollando. %%
