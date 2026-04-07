@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD041 -->
 <%*
   // 1. Pedir el nombre del concepto (slug)
   let titulo = await tp.system.prompt("Nombre del concepto (ej: mrp-material-requirements-planning)");
@@ -33,7 +34,7 @@
     semestre = await tp.system.prompt("Semestre (opcional)", "", true);
   }
   
-  // 4. Fecha y dificultad
+// 4. Fecha y dificultad
   let fecha = tp.date.now("YYYY-MM-DD");
   let dificultad = await tp.system.prompt("Dificultad (🟢 baja | 🟡 media | 🔴 alta)", "🟢 baja");
 %>---
@@ -42,78 +43,107 @@ materia: <% slug %>
 semestre: <% semestre %>
 fecha-creacion: <% fecha %>
 dificultad: <% dificultad %>
-estado: 🔵 borrador
+estado: 🟡 borrador
 tags: [concepto]
----
-%% ↑↑ Slug de la materia. Se obtiene automáticamente de la carpeta.
-   No borrar ni renombrar estos campos.
-   Dificultad: 🟢 baja | 🟡 media | 🔴 alta
-   Estado: 🔵 borrador → 🟢 revisada cuando esté completa %%
 
+---
+%% ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+No borrar ni renombrar estos campos de arriba. Son meta-datos que se usan para algunas configuraciones no están pensados tanto para la lectura.
+
+Los campos que si se pueden editar son:
+Dificultad: 🟢 baja | 🟡 media | 🔴 alta
+Estado: 🟡 borrador → 🟢 revisada cuando esté completa
+%%
 %% ============================================================
 PLANTILLA: NOTA ATÓMICA DE CONCEPTO (Zettelkasten + Feynman)
 
 CUÁNDO USARLA: Cada vez que procesás una clase y encontrás un concepto que merece su propio archivo.
+
 DÓNDE GUARDARLA: 01_Notes/Concepts/[slug-materia]/
 
 NOMBRE DE ARCHIVO RECOMENDADO:
-  nombre-del-concepto (en minúsculas con guiones)
-  ej: mrp-material-requirements-planning
+ nombre-del-concepto (en minúsculas con guiones)
+ ej: mrp-material-requirements-planning
 
-REGLA FUNDAMENTAL:
-  UNA nota = UNA sola idea. Si la nota toca dos conceptos → partila en dos notas separadas.
+REGLA FUNDAMENTAL: UNA nota = UNA sola idea. Si la nota toca dos conceptos → partila en dos notas separadas.
 
 FLUJO DE USO (Método Feynman):
-  1. Definición simple → como si se lo explicaras a alguien que no sabe nada
-  2. Explicación técnica → la versión precisa y completa
-  3. Ejemplo concreto → preferiblemente del parcial o proyecto actual
-  4. Errores comunes → qué confunde a la gente con este concepto
-  5. Flashcards → completar los bloques START/END y sincronizar con Anki
+
+ 1. Definición simple → como si se lo explicaras a alguien que no sabe nada
+ 2. Explicación técnica → la versión precisa y completa
+ 3. Ejemplo concreto → preferiblemente del parcial o proyecto actual
+ 4. Errores comunes → qué confunde a la gente con este concepto
+ 5. Flashcards → completar los bloques START/END y sincronizar con Anki
 ============================================================ %%
 
 # <% titulo %>
 
 ## 📖 Definición simple
-%% Explicalo como si el que lo va a leer nunca oyó hablar del tema.
-   Sin tecnicismos. Sin siglas sin explicar. Una o dos oraciones máximo.
-   Si no podés hacerlo simple, todavía no lo entendiste del todo (Feynman dixit). %%
 
+%%
+Explicalo como si el que lo va a leer nunca oyó hablar del tema.
 
+- Sin tecnicismos.
+- Sin siglas sin explicar.
+- Una o dos oraciones máximo.
+- Si no podés hacerlo simple, todavía no lo entendiste del todo (Feynman dixit).
+%%
 
 ## 🧩 Explicación técnica
-%% Ahora sí la versión completa: términos técnicos, fórmulas, estructura, etc.
-   Podés usar tablas, listas, diagramas ASCII o bloques de código. %%
 
+%%
+Ahora sí la versión completa con términos técnicos, fórmulas, estructura, etc. Podés usar tablas:
 
+- Listas
+- Diagramas
+- Bloques de código
+- Tablas
+- Imagenes
+%%
 
 ## 🔗 Se conecta con
-%% Links a otras notas atómicas relacionadas.
-   Esto es lo que convierte tus notas en una red (Zettelkasten) en vez de una lista.
-   Agregá todos los conceptos que se relacionen con este. %%
-- [[]]
+
+%%
+Links a otras notas atómicas relacionadas.
+Esto es lo que convierte tus notas en una red (Zettelkasten) en vez de una lista.
+
+Agregá todos los conceptos que se relacionen con este.
+%%
+
+- [[algun-enlace]]
 
 ## 🌍 Ejemplo concreto
-%% Un caso real, de código o del proyecto/parcial que estés haciendo.
-   Los ejemplos concretos son lo que hace que el concepto "enganche" en la memoria. %%
 
-```
-(código, diagrama o descripción del ejemplo aquí)
+%%
+Un caso real (puede ser codigo) sobre el concepto. Los ejemplos concretos son lo que hace que el concepto "enganche" en la memoria.
+%%
+
+```code
+codigo aqui...
 ```
 
 ## ⚠️ Errores comunes
-%% ¿Qué confunde a la gente con este concepto?
-   ¿Con qué otro concepto se suele mezclar?
-   ¿Qué pensabas vos antes de entenderlo bien? %%
+
+%%
+¿Qué confunde a la gente con este concepto?
+¿Con qué otro concepto se suele mezclar?
+¿Qué pensabas vos antes de entenderlo bien?
+%%
 
 ---
 
 ## 🃏 Flashcards → Anki
 
-%% Cada bloque START/END = una tarjeta en Anki.
-   Regla: al menos 2 tarjetas por concepto.
-     - Una para la definición
-     - Una para un ejemplo o diferencia con otro concepto
-   Sincronizar: Anki abierto → Ctrl+P → "Obsidian to Anki: Sync" %%
+%%
+Cada bloque START/END = una tarjeta en Anki.
+
+Regla: al menos 2 tarjetas por concepto.
+
+- Una para la definición
+- Una para un ejemplo o diferencia con otro concepto
+  
+Sincronizar: Anki abierto → Ctrl+P → "Obsidian to Anki: Sync"
+%%
 START
 Básico
 ¿Qué es <% titulo %>?
